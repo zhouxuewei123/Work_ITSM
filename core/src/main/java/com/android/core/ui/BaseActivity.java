@@ -28,6 +28,7 @@ import com.android.core.widget.LoadingView;
 import com.android.core.widget.Setting;
 import com.android.core.widget.ToastView;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.io.Serializable;
 
@@ -39,7 +40,7 @@ import butterknife.ButterKnife;
  * @author: ragkan
  * @time: 2016/7/6 22:29
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AutoLayoutActivity {
 
     private LoadingView mLoadingView;
     protected BasePresenter mPresenter;
@@ -91,7 +92,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (toolbar != null) {
             toolbar.setContentInsetsRelative(0, 0);
             toolbar.setTitle("");
-            final Drawable upArrow = getResources().getDrawable(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+            final Drawable upArrow = getResources().getDrawable(R.drawable.navbtn_back);
             upArrow.setColorFilter(getResources().getColor(R.color.white), PorterDuff.Mode.SRC_ATOP);
             toolbar.setNavigationIcon(upArrow);
         }
@@ -224,8 +225,8 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param text
      */
     public void showShortToast(String text) {
-        // Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-        ToastView.showToast(this, text, Toast.LENGTH_SHORT);
+         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+//        ToastView.showToast(this, text, Toast.LENGTH_SHORT);
     }
 
     /**
@@ -234,8 +235,8 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param resId
      */
     public void showLongToast(int resId) {
-        // Toast.makeText(this, getString(resId), Toast.LENGTH_LONG).show();
-        ToastView.showToast(this, getString(resId), Toast.LENGTH_LONG);
+         Toast.makeText(this, getString(resId), Toast.LENGTH_LONG).show();
+//        ToastView.showToast(this, getString(resId), Toast.LENGTH_LONG);
     }
 
     /**
@@ -244,8 +245,8 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @param text
      */
     public void showLongToast(String text) {
-        // Toast.makeText(this, text, Toast.LENGTH_LONG).show();
-        ToastView.showToast(this, text, Toast.LENGTH_LONG);
+         Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+//        ToastView.showToast(this, text, Toast.LENGTH_LONG);
     }
 
     /***************************
