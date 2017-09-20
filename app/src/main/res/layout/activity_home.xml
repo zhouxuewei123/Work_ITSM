@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/fly_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/home_bg">
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/ivSlide"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:src="@drawable/selector_slide_menu"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="70px"/>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="300px"
+                    android:layout_height="150px"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30px"
+                    android:src="@mipmap/logo2" />
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="60px"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/user" />
+
+                    <TextView
+                        android:id="@+id/tvUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15px"
+                        android:text="管理员"
+                        android:textColor="@color/white"
+                        android:textSize="24px" />
+                </com.zhy.autolayout.AutoLinearLayout>
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="50px">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/llTodoOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="70px"
+                        android:layout_marginRight="70px">
+
+                        <ImageView
+                            android:layout_width="120px"
+                            android:layout_height="120px"
+                            android:src="@drawable/selector_todo_order" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="待办工单"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/llCompleteOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="70px"
+                        android:layout_marginRight="70px"
+                        android:layout_marginLeft="70px">
+
+                        <ImageView
+                            android:layout_width="120px"
+                            android:layout_height="120px"
+                            android:src="@drawable/selector_complet_order"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="已办工单"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/llStatistic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="70px"
+                        android:layout_marginLeft="70px">
+
+                        <ImageView
+                            android:layout_width="120px"
+                            android:layout_height="120px"
+                            android:src="@drawable/selector_order_statistic" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="工单统计"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="120px"
+                    >
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/llScan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="70px"
+                        android:layout_marginRight="70px">
+
+                        <ImageView
+                            android:layout_width="120px"
+                            android:layout_height="120px"
+                            android:src="@drawable/selector_scan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="配置扫描"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/llQuery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="70px"
+                        android:layout_marginRight="70px"
+                        android:layout_marginLeft="70px">
+
+                        <ImageView
+                            android:layout_width="120px"
+                            android:layout_height="120px"
+                            android:src="@drawable/selector_query" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="知识查询"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:id="@+id/llPolling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="70px"
+                        android:layout_marginLeft="70px">
+
+                        <ImageView
+                            android:layout_width="120px"
+                            android:layout_height="120px"
+                            android:src="@drawable/polling" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="巡检管理"
+                            android:textColor="@color/white"
+                            android:textSize="24px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </com.zhy.autolayout.AutoLinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company"
+                android:textColor="@color/white"
+                android:textSize="20px"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10px"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoFrameLayout>
+    <fragment
+        android:id="@+id/fg_left_menu"
+        android:name="com.example.lanshan.work_itsm.ui.fragment.LeftSlideFragment"
+        android:layout_width="600px"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:tag="LEFT"
+        tools:layout="@layout/fg_left" />
+</android.support.v4.widget.DrawerLayout>

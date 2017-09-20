@@ -4,4 +4,5 @@
     <string name="login">登录</string>
     <string name="app_no_network_tip">网络连接失败，请先检查网络是否打开</string>
     <string name="login_loading">登录中，请稍等...</string>
+    <string name="company">大庆金桥信息技术工程有限公司成都分公司</string>
 </resources>

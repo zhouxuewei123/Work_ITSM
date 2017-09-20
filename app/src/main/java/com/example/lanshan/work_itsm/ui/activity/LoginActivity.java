@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.MainApplication;
 import com.android.core.ui.BaseActivity;
 import com.android.core.utils.Utils;
 import com.example.lanshan.work_itsm.R;
@@ -13,6 +14,7 @@ import com.example.lanshan.work_itsm.model.config.Const;
 import com.example.lanshan.work_itsm.present.ILogin;
 import com.example.lanshan.work_itsm.present.LoginPresenter;
 import com.example.lanshan.work_itsm.present.core.LoadView;
+import com.google.gson.reflect.TypeToken;
 
 import butterknife.Bind;
 
@@ -22,11 +24,11 @@ import butterknife.Bind;
 
 public class LoginActivity extends BaseActivity implements LoadView<UserBean>,View.OnClickListener {
     @Bind(R.id.etUsername)
-    EditText etUsername;
+    EditText etUsername;//账号输入框
     @Bind(R.id.etPassword)
-    EditText etPassword;
+    EditText etPassword;//密码输入框
     @Bind(R.id.btLogin)
-    Button btLogin;
+    Button btLogin;//登录按钮
     @Bind(R.id.ivList)
     ImageView ivList;
     @Override
@@ -61,6 +63,9 @@ public class LoginActivity extends BaseActivity implements LoadView<UserBean>,Vi
         if(body!=null){
             if(body.isSuccess()){
                 showShortToast("登录成功");
+                aCache.clear();
+                aCache.put(Const.ACACHE_USER,MainApplication.gson.toJson(body),1000*60*60);
+                skip(HomeActivity.class);
             }else {
                 if(!Utils.isEmpty(body.getException())){
                     showShortToast(body.getException());
